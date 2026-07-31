@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A privacy-conscious static tool for publishing and generating post-workshop survey reports."
+    />
+    <title>Workshop Survey Reports</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script type="module" src="assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Workshop Survey Reports home">
+        <span class="brand-mark" aria-hidden="true">WS</span>
+        <span>Workshop Survey Reports</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#published">Published report</a>
+        <a href="#generator">Generate a report</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="intro" id="top" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="context-line">Survey evidence for better workshops</p>
+          <h1 id="intro-title">Find the useful signal. Keep the human context.</h1>
+          <p class="intro-lede">
+            View deliberately published post-workshop findings, or turn compatible Google Forms CSV
+            exports into a decision-ready report directly in your browser.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="#generator">Generate a report</a>
+            <a class="button button-secondary" href="#published">View the published report</a>
+          </div>
+        </div>
+        <aside class="operating-note" aria-label="How the tool works">
+          <p class="note-label">How this site handles data</p>
+          <ol>
+            <li>Select one or more matching CSV exports.</li>
+            <li>Review the analysis generated on your device.</li>
+            <li>Print, save, or export only what you choose to share.</li>
+          </ol>
+          <p><strong>Your uploaded files are not sent to this site.</strong></p>
+        </aside>
+      </section>
+
+      <section class="section published-section" id="published" aria-labelledby="published-title">
+        <div class="section-heading">
+          <div>
+            <p class="context-line">Published analysis</p>
+            <h2 id="published-title">Post-workshop survey — June–July 2026</h2>
+          </div>
+          <a class="text-link" href="reports/post-workshop-2026/report.html">Open full report <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="report-preview">
+          <div class="report-reading">
+            <p class="report-statement">
+              Immediate workshop feedback is strongly favorable. The next opportunity is not basic
+              satisfaction—it is helping participants turn understanding into confident, practical application.
+            </p>
+            <dl class="report-facts">
+              <div><dt>Completed responses</dt><dd>24</dd></div>
+              <div><dt>Overall rating mean</dt><dd>4.62 / 5</dd></div>
+              <div><dt>Positive ratings</dt><dd>96.7%</dd></div>
+              <div><dt>Relative priority</dt><dd>Examples &amp; activities</dd></div>
+            </dl>
+          </div>
+          <div class="report-actions">
+            <img
+              src="reports/post-workshop-2026/charts/01_overall_question_scores.svg"
+              alt="Bar chart comparing the ten workshop survey question scores."
+            />
+            <p>
+              <strong>Key recommendation:</strong> reduce setup friction, provide reusable reference
+              material, and make more room for guided practice.
+            </p>
+            <a class="button button-secondary" href="reports/post-workshop-2026/report.html">Read the full analysis</a>
+          </div>
+        </div>
+        <p class="privacy-caption">
+          This published report contains aggregated and anonymized findings only. Raw survey exports are not included in this public repository.
+        </p>
+      </section>
+
+      <section class="section generator-section" id="generator" aria-labelledby="generator-title">
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="context-line">Local report generator</p>
+            <h2 id="generator-title">Make a new report from matching CSV exports</h2>
+          </div>
+        </div>
+        <p class="section-lede">
+          Use Google Forms CSV exports with the same columns. The tool combines files into one report,
+          preserves filename-based cohorts, and never uploads the response data.
+        </p>
+
+        <form class="report-form" id="report-form" novalidate>
+          <div class="form-grid">
+            <div class="field-group field-wide">
+              <label for="survey-files">CSV files</label>
+              <input id="survey-files" name="survey-files" type="file" accept=".csv,text/csv" multiple required />
+              <p class="field-help" id="file-help">
+                Select one or more CSV files exported from the same form. Quoted comments and line breaks are supported.
+              </p>
+            </div>
+            <div class="field-group">
+              <label for="report-title">Report title <span class="optional">(optional)</span></label>
+              <input id="report-title" name="report-title" type="text" maxlength="120" placeholder="e.g. Q3 workshop feedback" />
+            </div>
+            <div class="field-group">
+              <label for="report-context">Context note <span class="optional">(optional)</span></label>
+              <input id="report-context" name="report-context" type="text" maxlength="180" placeholder="e.g. Leadership review · September 2026" />
+            </div>
+          </div>
+          <div class="form-footer">
+            <p class="privacy-message" id="privacy">
+              <strong>Private by design.</strong> Processing happens in this browser. Refreshing or closing this page clears the uploaded data.
+            </p>
+            <button class="button button-primary" type="submit" id="generate-button">Generate report</button>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <details class="format-help">
+          <summary>What makes a CSV compatible?</summary>
+          <div>
+            <p>
+              Every selected file must have the same header row. The tool treats columns containing only
+              1–5 values as rating questions, recognizes a timestamp column when present, and recognizes a
+              clearly named or likely free-text feedback column when present.
+            </p>
+            <p>
+              It is optimized for Google Forms exports like the published report. It reports missing values
+              rather than silently converting them to a score.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section results-section" id="results" hidden aria-labelledby="results-title">
+        <div class="section-heading">
+          <div>
+            <p class="context-line">Generated locally</p>
+            <h2 id="results-title" tabindex="-1">Survey report</h2>
+            <p class="generated-context" id="generated-context"></p>
+          </div>
+          <div class="result-actions">
+            <button class="button button-secondary" type="button" id="download-summary">Download summary CSV</button>
+            <button class="button button-primary" type="button" id="print-report">Print / Save PDF</button>
+          </div>
+        </div>
+
+        <div class="analysis-disclosure" id="analysis-disclosure"></div>
+        <div class="generated-summary" id="generated-summary"></div>
+
+        <div class="results-layout">
+          <section class="result-block" aria-labelledby="question-score-title">
+            <h3 id="question-score-title">Question scores</h3>
+            <p class="block-intro">Means use all available responses to each item. The bar uses the full 0–5 scale.</p>
+            <div class="score-list" id="score-list"></div>
+          </section>
+
+          <section class="result-block" aria-labelledby="cohort-title">
+            <h3 id="cohort-title">Filename-based cohorts</h3>
+            <p class="block-intro">Cohort labels come from filenames and are descriptive only—not departments or facilitators.</p>
+            <div class="table-scroll" id="cohort-table"></div>
+          </section>
+        </div>
+
+        <section class="result-block" id="profile-results" hidden aria-labelledby="profile-title">
+          <h3 id="profile-title">Additional profile fields</h3>
+          <p class="block-intro">
+            Categorical fields outside the rating scale—such as department, team, job level, location, or AI-tool questions—are summarized when present.
+          </p>
+          <div class="profile-grid" id="profile-fields"></div>
+        </section>
+
+        <section class="result-block" aria-labelledby="distribution-title">
+          <h3 id="distribution-title">Full question distribution</h3>
+          <p class="block-intro">Ratings are classified as positive (4–5), neutral (3), and negative (1–2) for analysis.</p>
+          <div class="table-scroll" id="question-table"></div>
+        </section>
+
+        <section class="result-block feedback-block" id="feedback-results" hidden aria-labelledby="feedback-title">
+          <h3 id="feedback-title">Written feedback — local review</h3>
+          <p class="block-intro">
+            Automated phrase tags are an orientation aid, not a substitute for human review. Comments remain in this browser unless you export them yourself.
+          </p>
+          <div class="feedback-layout">
+            <div id="feedback-themes"></div>
+            <details class="local-comments">
+              <summary id="comment-summary">Review written comments</summary>
+              <ol id="comment-list"></ol>
+            </details>
+          </div>
+        </section>
+
+        <section class="method-note" aria-labelledby="method-title">
+          <h3 id="method-title">Methods and limits</h3>
+          <ul id="method-list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Workshop Survey Reports · Static GitHub Pages site · Browser-first processing</p>
+      <a href="https://github.com/swd-edag-my/workshop-survey-reports">View the project on GitHub</a>
+    </footer>
+  </body>
+</html>
