@@ -13,7 +13,7 @@ After the first successful GitHub Pages workflow run, the site is available at:
 
 - <https://swd-edag-my.github.io/workshop-survey-reports/>
 
-The initial published report is available under `site/reports/post-workshop-2026/`. It includes aggregate, anonymized findings only; filename-based cohort labels have been replaced with neutral cohort labels. Raw response exports are intentionally excluded from this public repository.
+The initial published report is available under `site/reports/post-workshop-2026/`. It is an executive summary of the three post-workshop surveys (facilitators: Farihim, Hafiezul, and Sheue Shin, June–July 2026), presenting key insights and recommendations for future workshop facilitators in an aggregated, anonymized form. Raw response exports are intentionally excluded from this public repository.
 
 ## Use the report generator
 

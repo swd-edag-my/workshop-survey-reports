@@ -1,18 +1,588 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Post-Workshop Survey Analysis</title><style>
-:root{--ink:#172033;--muted:#5b6b80;--teal:#0f766e;--pale:#eaf7f5;--line:#d9e2ec;--amber:#fff6df}*{box-sizing:border-box}body{margin:0;background:#f4f7fa;color:var(--ink);font:15px/1.55 Arial,Helvetica,sans-serif}main{max-width:1180px;margin:auto;background:white;padding:44px 54px 70px}h1{font-size:34px;line-height:1.15;margin:0 0 8px}h2{font-size:23px;margin:42px 0 13px;border-bottom:2px solid var(--line);padding-bottom:8px}h3{font-size:17px;margin:24px 0 8px}.sub,.small{color:var(--muted)}.pill{display:inline-block;background:var(--pale);color:#075d57;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:bold;margin:5px 5px 0 0}.callout{border-left:5px solid var(--teal);background:var(--pale);padding:14px 17px;margin:18px 0}.warn{border-left-color:#b7791f;background:var(--amber)}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:24px 0}.kpi{border:1px solid var(--line);border-radius:10px;padding:15px;background:#fff}.num{font-size:26px;font-weight:bold;color:var(--teal)}.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:12px 0 20px}table{border-collapse:collapse;width:100%;font-size:12px}th{background:#edf3f8;text-align:left;white-space:nowrap}th,td{padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border:0}img{max-width:100%;border:1px solid var(--line);border-radius:8px;margin:14px 0 4px}.caption{font-size:12px;color:var(--muted);margin-top:0}details{border:1px solid var(--line);border-radius:7px;padding:10px 12px;margin:7px 0}summary{cursor:pointer}summary span{float:right;color:var(--teal);font-weight:bold}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.slides{columns:2;gap:28px}.slide{break-inside:avoid;border:1px solid var(--line);border-radius:8px;padding:12px;margin:0 0 12px}@media(max-width:760px){main{padding:28px 18px}.kpis,.grid{grid-template-columns:1fr}.slides{columns:1}h1{font-size:28px}}</style><body><main>
-<p class="sub">Senior-management report · Generated from the three supplied Post-Workshop CSV exports only</p><h1>Post-Workshop Survey Analysis</h1><p class="sub">24 completed responses · 09 June–30 July 2026 (GMT+8) · 10 rating items + 1 open-text item</p><div><span class="pill">Post-Workshop Survey (Cohort A).csv</span><span class="pill">Post-Workshop Survey (Cohort B).csv</span><span class="pill">Post-Workshop Survey (Cohort C).csv</span></div>
-<div class="kpis"><div class="kpi"><div class="num">24</div>Respondents</div><div class="kpi"><div class="num">4.62/5</div>Overall rating mean</div><div class="kpi"><div class="num">96.7%</div>Positive ratings (4–5)</div><div class="kpi"><div class="num">0</div>Ratings of 1–2</div></div>
-<div class="callout warn"><b>Assumptions and limits.</b> The export does not include scale anchors, demographics, workshop topic, eligible/invited count, or AI-adoption fields. This report treats 4–5 as positive, 3 as neutral, and 1–2 as negative because all statements are positively framed. It describes completed feedback—not response rate, causal impact, or long-term behavior.</div>
-<h2>1. Executive Summary</h2><p>This consolidated post-workshop survey is exceptionally favorable on immediate reactions and self-reported learning. All 240 rating cells are complete; 232 are 4–5, 8 are 3, and none are 1–2.</p><ol><li><b>Understanding and satisfaction lead:</b> both average <b>4.75/5</b> and <b>4.75/5</b>, respectively.</li><li><b>Application is strong:</b> real-world application averages <b>4.71/5</b>; every respondent chose 4 or 5.</li><li><b>Practical delivery is the priority:</b> examples/activities is the relative low point at <b>4.46/5</b>, with three comments asking for more time, implementation depth, or exercises.</li><li><b>Transfer confidence lags comprehension:</b> confidence is <b>4.54/5</b> versus understanding at 4.75/5—favorable, but an opportunity for guided practice.</li><li><b>Delivery varies by file cohort:</b> composite means range from <b>4.47</b> to <b>4.85</b>. Treat this as a session-improvement signal, not a departmental or person-level judgment.</li></ol><div class="callout"><b>Surprising trend:</b> Near-ceiling ratings coexist with concrete implementation requests (setup guidance, more hands-on time, slides/cheat sheets). Satisfaction does not mean the learning journey is friction-free.</div>
-<h2>2. Respondent Demographics</h2><p>No department, team, job level, experience, location, role, or other demographic field was collected. No response rate can be computed because the invitation/attendance denominator is unknown. Filename labels are used only as anonymous <b>file cohorts</b>.</p><div class="scroll"><table><thead><tr><th>File cohort</th><th>n</th><th>Collection window</th><th>Composite mean</th><th>Median</th><th>Sample SD</th><th>Satisfaction</th></tr></thead><tbody><tr><td>Cohort A</td><td>6</td><td>09 Jun–10 Jun 2026</td><td>4.47</td><td>4.50</td><td>0.59</td><td>4.33</td></tr><tr><td>Cohort B</td><td>8</td><td>16 Jun–16 Jun 2026</td><td>4.85</td><td>4.90</td><td>0.18</td><td>5.00</td></tr><tr><td>Cohort C</td><td>10</td><td>28 Jul–30 Jul 2026</td><td>4.53</td><td>4.55</td><td>0.36</td><td>4.80</td></tr></tbody></table></div><p><b>Observation:</b> Cohort B is the highest-scoring file cohort (4.85/5); Cohort A is lowest (4.47/5). Differences may reflect topic, timing, cohort composition, or delivery conditions that were not captured.</p>
-<h2>3. Question-by-Question Analysis</h2><p><b>Question ranking:</b></p><ol><li><b>#1 Understanding:</b> 4.75/5</li><li><b>#1 Overall satisfaction:</b> 4.75/5</li><li><b>#3 Real-world application:</b> 4.71/5</li><li><b>#4 Relevance:</b> 4.67/5</li><li><b>#4 Knowledge / skills:</b> 4.67/5</li><li><b>#4 Facilitator clarity:</b> 4.67/5</li><li><b>#7 Confidence:</b> 4.54/5</li><li><b>#8 Organization:</b> 4.50/5</li><li><b>#8 Difficulty fit:</b> 4.50/5</li><li><b>#10 Examples / activities:</b> 4.46/5</li></ol><div class="scroll"><table><thead><tr><th>Q</th><th>Question</th><th>Mean</th><th>Median</th><th>Mode</th><th>SD</th><th>Range</th><th>5</th><th>4</th><th>3</th><th>2</th><th>1</th><th>Positive</th><th>Neutral</th><th>Negative</th></tr></thead><tbody><tr><td>Q1</td><td>Understanding</td><td>4.75</td><td>5.0</td><td>5</td><td>0.44</td><td>4–5</td><td>18 (75.0%)</td><td>6 (25.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>100.0%</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Q2</td><td>Confidence</td><td>4.54</td><td>5.0</td><td>5</td><td>0.51</td><td>4–5</td><td>13 (54.2%)</td><td>11 (45.8%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>100.0%</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Q3</td><td>Relevance</td><td>4.67</td><td>5.0</td><td>5</td><td>0.48</td><td>4–5</td><td>16 (66.7%)</td><td>8 (33.3%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>100.0%</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Q4</td><td>Knowledge / skills</td><td>4.67</td><td>5.0</td><td>5</td><td>0.48</td><td>4–5</td><td>16 (66.7%)</td><td>8 (33.3%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>100.0%</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Q5</td><td>Facilitator clarity</td><td>4.67</td><td>5.0</td><td>5</td><td>0.48</td><td>4–5</td><td>16 (66.7%)</td><td>8 (33.3%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>100.0%</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Q6</td><td>Examples / activities</td><td>4.46</td><td>5.0</td><td>5</td><td>0.72</td><td>3–5</td><td>14 (58.3%)</td><td>7 (29.2%)</td><td>3 (12.5%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>87.5%</td><td>12.5%</td><td>0.0%</td></tr><tr><td>Q7</td><td>Organization</td><td>4.50</td><td>5.0</td><td>5</td><td>0.72</td><td>3–5</td><td>15 (62.5%)</td><td>6 (25.0%)</td><td>3 (12.5%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>87.5%</td><td>12.5%</td><td>0.0%</td></tr><tr><td>Q8</td><td>Difficulty fit</td><td>4.50</td><td>5.0</td><td>5</td><td>0.59</td><td>3–5</td><td>13 (54.2%)</td><td>10 (41.7%)</td><td>1 (4.2%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>95.8%</td><td>4.2%</td><td>0.0%</td></tr><tr><td>Q9</td><td>Real-world application</td><td>4.71</td><td>5.0</td><td>5</td><td>0.46</td><td>4–5</td><td>17 (70.8%)</td><td>7 (29.2%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>100.0%</td><td>0.0%</td><td>0.0%</td></tr><tr><td>Q10</td><td>Overall satisfaction</td><td>4.75</td><td>5.0</td><td>5</td><td>0.53</td><td>3–5</td><td>19 (79.2%)</td><td>4 (16.7%)</td><td>1 (4.2%)</td><td>0 (0.0%)</td><td>0 (0.0%)</td><td>95.8%</td><td>4.2%</td><td>0.0%</td></tr></tbody></table></div><p class="caption">Distribution cells are count (percentage). All ten questions have a modal rating of 5. Quantitative/checkbox/multiple-choice questions beyond the 10 Likert-style ratings do not exist in the export.</p><img src="charts/01_overall_question_scores.svg" alt="Overall question score bar chart"><p class="caption">Chart 1 — ranks the ten items by mean on the full 0–5 scale.</p><img src="charts/02_rating_distribution.svg" alt="Likert distribution chart"><p class="caption">Chart 2 — shows the full distribution. The small neutral pockets identify relative weak areas.</p><h3>Interpretation for every question</h3><details><summary><b>Q1 — I have a better understanding of the workshop topic after attending.</b> <span>4.75/5</span></summary><p><b>Distribution:</b> 5: 18 (75.0%), 4: 6 (25.0%), 3: 0 (0.0%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 4–5. Immediate comprehension is consistently favorable: all ratings are 4–5.</p></details><details><summary><b>Q2 — I feel more confident applying this topic after the workshop.</b> <span>4.54/5</span></summary><p><b>Distribution:</b> 5: 13 (54.2%), 4: 11 (45.8%), 3: 0 (0.0%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 4–5. Positive but lower than understanding; use practice to convert understanding into confidence.</p></details><details><summary><b>Q3 — The workshop content was relevant to my role, studies, or responsibilities.</b> <span>4.67/5</span></summary><p><b>Distribution:</b> 5: 16 (66.7%), 4: 8 (33.3%), 3: 0 (0.0%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 4–5. Every rating is 4–5, indicating strong immediate role/study relevance.</p></details><details><summary><b>Q4 — The workshop improved my knowledge or skills in this topic.</b> <span>4.67/5</span></summary><p><b>Distribution:</b> 5: 16 (66.7%), 4: 8 (33.3%), 3: 0 (0.0%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 4–5. All ratings are positive; this is self-reported gain, not a pre/post skills test.</p></details><details><summary><b>Q5 — The facilitator explained the topic clearly.</b> <span>4.67/5</span></summary><p><b>Distribution:</b> 5: 16 (66.7%), 4: 8 (33.3%), 3: 0 (0.0%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 4–5. All ratings are positive and comments corroborate clear explanation.</p></details><details><summary><b>Q6 — The examples, demonstrations, or activities helped me understand the topic.</b> <span>4.46/5</span></summary><p><b>Distribution:</b> 5: 14 (58.3%), 4: 7 (29.2%), 3: 3 (12.5%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 3–5. Lowest mean and 12.5% neutral: the clearest priority for more implementation, demonstrations, and exercises.</p></details><details><summary><b>Q7 — The workshop was well organized and easy to follow.</b> <span>4.50/5</span></summary><p><b>Distribution:</b> 5: 15 (62.5%), 4: 6 (25.0%), 3: 3 (12.5%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 3–5. Second-lowest tier with 12.5% neutral; lower score clusters in the Cohort A file cohort alongside setup comments.</p></details><details><summary><b>Q8 — The workshop difficulty level was appropriate for my current knowledge.</b> <span>4.50/5</span></summary><p><b>Distribution:</b> 5: 13 (54.2%), 4: 10 (41.7%), 3: 1 (4.2%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 3–5. 95.8% positive; offer optional preparation and differentiated practice for fit.</p></details><details><summary><b>Q9 — I can apply what I learned from this workshop in real situations.</b> <span>4.71/5</span></summary><p><b>Distribution:</b> 5: 17 (70.8%), 4: 7 (29.2%), 3: 0 (0.0%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 4–5. All ratings are positive; confirm transfer later through a 30/60-day follow-up.</p></details><details><summary><b>Q10 — Overall, I am satisfied with the workshop.</b> <span>4.75/5</span></summary><p><b>Distribution:</b> 5: 19 (79.2%), 4: 4 (16.7%), 3: 1 (4.2%), 2: 0 (0.0%), 1: 0 (0.0%). <b>Median:</b> 5.0; <b>mode:</b> 5; <b>observed range:</b> 3–5. Joint-highest mean; ceiling effects make satisfaction less sensitive to small improvements.</p></details>
-<h2>4. AI Adoption Analysis</h2><div class="callout warn"><b>Not measurable from this instrument.</b> There are no questions on AI use, AI tools, frequency, confidence, proficiency, training effectiveness, barriers, department, or productivity outcomes. One request for an “n8n cheat sheet” is workshop-resource feedback, not evidence of organizational AI adoption.</div><div class="scroll"><table><thead><tr><th>Requested AI measure</th><th>What can be concluded</th></tr></thead><tbody><tr><td>Current adoption / tools / frequency</td><td>Not collected.</td></tr><tr><td>Confidence / proficiency / training effectiveness</td><td>Only generic workshop confidence is collected; it cannot be attributed to AI.</td></tr><tr><td>Barriers / high- and low-use departments</td><td>Not collected; no department field exists.</td></tr><tr><td>Opportunity</td><td>Add tool, task, frequency, skill, barrier, and 30/60-day use questions if AI adoption is a strategic objective.</td></tr></tbody></table></div>
-<h2>5. Cross Analysis</h2><div class="grid"><div><h3>Cohort × score</h3><p>Immediate composite scores: Cohort A <b>4.47</b>, Cohort B <b>4.85</b>, Cohort C <b>4.53</b>. Cohort A’s lowest question means are examples/activities (4.00) and organization (4.17), consistent with its setup/hands-on comments.</p></div><div><h3>Confidence × application</h3><p>Exploratory Spearman association: <b>ρ=0.51</b>, two-sided permutation <b>p=0.022</b> (50,000 shuffles; below the conventional unadjusted 0.05 threshold). Higher confidence is associated with higher perceived ability to apply learning. It is a small, post-session, non-random sample; do not infer causation or generalize to employees at large.</p></div></div><img src="charts/03_cohort_composite_scores.svg" alt="Cohort composite bar chart"><p class="caption">Chart 3 — file-cohort composite scores; not a demographic or facilitator ranking.</p><img src="charts/04_cohort_question_heatmap.svg" alt="Cohort heatmap"><p class="caption">Chart 4 — relative variation by question and cohort. The color scale is zoomed to 4.0–5.0 for readability.</p>
-<h2>6. Trends, Patterns, and Risk Signals</h2><ul><li><b>Ceiling effect:</b> overall median and mode are both 5; satisfaction is useful for affirmation but weak at distinguishing marginal gains.</li><li><b>Transfer gap:</b> understanding exceeds confidence by 0.21 points. Use practice and post-session support to close it.</li><li><b>Operational friction:</b> prerequisites, package dependencies, and materials requests point to preventable setup/support cost.</li><li><b>High-performing group:</b> Cohort B is strong across all items (4.75–5.00); document its delivery conditions as a reusable workshop playbook.</li><li><b>High-risk data gap:</b> no demographics, topic, denominators, or delayed outcomes means leadership cannot assess reach, equity, usage, or ROI.</li></ul>
-<h2>7. Sentiment Analysis</h2><div class="scroll"><table><thead><tr><th>Primary tone</th><th>Comments</th><th>Share</th><th>Definition</th></tr></thead><tbody><tr><td>Positive</td><td>21</td><td>87.5%</td><td>Praise or positive benefit; can also contain a suggestion.</td></tr><tr><td>Neutral / action-oriented</td><td>3</td><td>12.5%</td><td>Concrete request without negative language.</td></tr><tr><td>Negative</td><td>0</td><td>0.0%</td><td>No comments coded negative.</td></tr></tbody></table></div><div class="scroll"><table><thead><tr><th>Theme</th><th>Comments</th><th>Share of 24</th><th>Reading</th></tr></thead><tbody><tr><td>Practical learning / relevance</td><td>6</td><td>25.0%</td><td>Multi-label; theme counts need not total 24.</td></tr><tr><td>Clear delivery / organization</td><td>4</td><td>16.7%</td><td>Multi-label; theme counts need not total 24.</td></tr><tr><td>More hands-on / time</td><td>3</td><td>12.5%</td><td>Multi-label; theme counts need not total 24.</td></tr><tr><td>Setup prerequisites</td><td>2</td><td>8.3%</td><td>Multi-label; theme counts need not total 24.</td></tr><tr><td>Reference materials</td><td>2</td><td>8.3%</td><td>Multi-label; theme counts need not total 24.</td></tr><tr><td>General endorsement</td><td>11</td><td>45.8%</td><td>Multi-label; theme counts need not total 24.</td></tr></tbody></table></div><p><b>Overall sentiment score:</b> <b>+87.5</b> on a −100 to +100 net-sentiment scale. Tone is appreciative and constructive rather than frustrated. Common positive words: <b>good</b> (13), <b>well</b> (3), <b>clear</b> (1), <b>clearly</b> (1), <b>useful</b> (2), <b>informative</b> (3), <b>new</b> (2). Common concerns: more implementation/time (3 comments), setup prerequisites (2), and post-session references (2).</p><p><b>Representative anonymized feedback:</b> “Gained good knowledge and super useful on daily task.” · “The hands-on session could also include more activities and exercises.” · “Share slides after workshop.” · “good if can share some n8n cheat sheet for reference...”</p><img src="charts/05_feedback_themes.svg" alt="Feedback themes bar chart"><p class="caption">Chart 5 — actionable feedback themes. A word cloud was not used as a primary decision chart: with only 24 short comments, generic terms such as “good” would obscure the actionable requests.</p>
-<h2>8. Recommendations</h2><div class="scroll"><table><thead><tr><th>Priority / horizon</th><th>Action</th><th>Impact</th><th>Ease</th><th>Expected ROI</th></tr></thead><tbody><tr><td>Quick win · ≤1 month</td><td>Publish a standard pre-workshop setup checklist: versions, package dependencies, access test, and troubleshooting route.</td><td>High</td><td>High</td><td>High</td></tr><tr><td>Quick win · ≤1 month</td><td>Share slides, cheat sheet, sample files, and recording/recap within 48 hours.</td><td>High</td><td>High</td><td>High</td></tr><tr><td>Quick win · ≤1 month</td><td>Add a short guided practice block and a final real-work use case.</td><td>High</td><td>Medium</td><td>High</td></tr><tr><td>Medium term · 3–6 months</td><td>Create a reusable delivery playbook from the strongest cohort: agenda, prep, examples, facilitator guide, and feedback loop.</td><td>High</td><td>Medium</td><td>High</td></tr><tr><td>Medium term · 3–6 months</td><td>Run an optional “v2” lab/office hour focused on implementation and participant use cases.</td><td>High</td><td>Medium</td><td>High</td></tr><tr><td>Medium term · 3–6 months</td><td>Redesign the survey with topic, role/team, experience, scale anchors, and a 30/60-day transfer question.</td><td>High</td><td>Medium</td><td>High</td></tr><tr><td>Long term · 6–12 months</td><td>Measure adoption/ROI with behavior, time saved, quality, risk, and use-case data—especially if these are AI/automation workshops.</td><td>High</td><td>Medium</td><td>High</td></tr></tbody></table></div>
-<h2>9. Management Insights</h2><ul><li><b>Focus:</b> convert strong satisfaction into sustained application; prioritize practice, prerequisites, and reusable resources.</li><li><b>Biggest risk:</b> using a high immediate satisfaction score as a proxy for long-term adoption or business value.</li><li><b>Opportunity:</b> standardize the delivery conditions behind the Cohort B cohort and offer a second-level implementation lab.</li><li><b>Departments needing attention:</b> cannot be identified. Do not label a cohort as a department without a department field.</li><li><b>Employee communication:</b> acknowledge the feedback, confirm setup guides/materials and more hands-on practice, and explain how 30/60-day outcomes will be followed up.</li></ul>
-<h2>10. Presentation-Ready Summary</h2><div class="slides"><div class="slide"><b>Slide 1 — Survey Overview</b><ul><li>24 completed post-workshop responses</li><li>10 rating items + open feedback</li><li>Collection: June–July 2026 (GMT+8)</li></ul></div><div class="slide"><b>Slide 2 — Respondent Demographics</b><ul><li>File cohorts: 6 / 8 / 10 responses</li><li>No demographic fields collected</li><li>Response rate unavailable</li></ul></div><div class="slide"><b>Slide 3 — Key Findings</b><ul><li>Overall mean: 4.62/5</li><li>96.7% ratings are positive</li><li>Examples/activities is the relative priority</li></ul></div><div class="slide"><b>Slide 4 — AI Adoption Overview</b><ul><li>AI adoption was not measured</li><li>Do not infer use from this survey</li><li>Add tool/frequency/barrier questions</li></ul></div><div class="slide"><b>Slide 5 — Strengths</b><ul><li>Understanding and satisfaction: 4.75/5</li><li>Application: 4.71/5</li><li>No 1–2 ratings</li></ul></div><div class="slide"><b>Slide 6 — Improvement Areas</b><ul><li>Hands-on implementation and time</li><li>Pre-session prerequisites</li><li>Slides / cheat sheets / reference materials</li></ul></div><div class="slide"><b>Slide 7 — Employee Feedback Themes</b><ul><li>Practical learning and relevance: 6 comments</li><li>Clear delivery / organization: 4</li><li>More hands-on/time: 3</li></ul></div><div class="slide"><b>Slide 8 — Recommendations</b><ul><li>Setup checklist + materials within 48 hours</li><li>Guided practice and a v2 lab</li><li>Standardized workshop playbook</li></ul></div><div class="slide"><b>Slide 9 — Action Plan</b><ul><li>0–30 days: remove setup friction</li><li>3–6 months: standardize and follow up</li><li>6–12 months: measure behavior and ROI</li></ul></div><div class="slide"><b>Slide 10 — Conclusion</b><ul><li>Immediate workshop health is strong</li><li>Next value lies in transfer, not satisfaction alone</li><li>Improve measurement before broad decisions</li></ul></div></div>
-<h2>11. Visualizations</h2><p>Five editable SVG charts are generated in <code>charts/</code>: question means, rating distribution, cohort composite scores, cohort heatmap, and actionable feedback themes. Pie, radar, treemap, line, and word-cloud formats were not used because this is a small, cross-sectional, non-hierarchical dataset; they would add visual complexity without stronger decisions.</p>
-<h2>12. Statistical and Data-Quality Insights</h2><div class="scroll"><table><thead><tr><th>Measure</th><th>Result</th><th>Interpretation</th></tr></thead><tbody><tr><td>Overall mean / median / mode</td><td>4.62 / 5.0 / 5</td><td>Responses cluster at the top of the scale.</td></tr><tr><td>Overall sample SD</td><td>0.55</td><td>Low dispersion; strong ceiling effect.</td></tr><tr><td>Missing ratings</td><td>0 of 240 (0.0%)</td><td>Every rating response is present.</td></tr><tr><td>Missing comments</td><td>0 of 24 (0.0%)</td><td>All respondents supplied a comment.</td></tr><tr><td>Duplicates</td><td>No duplicate timestamps observed</td><td>Anonymous data cannot rule out repeat respondents beyond this check.</td></tr><tr><td>Response rate</td><td>Not calculable</td><td>Eligible/invited attendee count absent.</td></tr><tr><td>Significance</td><td>Confidence–application ρ=0.51, permutation p=0.022</td><td>Exploratory only; small non-random sample and ordinal ceiling effects apply.</td></tr></tbody></table></div>
-<h2>13. Final Conclusion</h2><p><b>Overall health:</b> strong immediate reaction, relevance, and self-reported learning/application. <b>Biggest strengths:</b> understanding, satisfaction, relevance, and perceived applicability. <b>Biggest weaknesses:</b> not poor scores, but relative gaps in hands-on examples, session organization/setup, and confidence transfer. <b>Top five priorities:</b> (1) pre-workshop setup guide, (2) reusable materials, (3) more guided practice, (4) implementation-focused follow-up, and (5) a measurement redesign with delayed outcomes and segmentation. <b>Next step:</b> implement the quick wins before the next cohort, then run a 30/60-day follow-up to test whether immediate satisfaction becomes actual application.</p><p class="small">This public version intentionally excludes raw response exports. It contains aggregated and anonymized analysis only.</p></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post-Workshop Survey Summary · Key Insights &amp; Recommendations</title>
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f7fc;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      padding: 2rem 1.5rem;
+      color: #1e2b3c;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    /* cards & layout */
+    .header {
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-weight: 600;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(145deg, #0b2a4a, #1b4a7a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header .badge {
+      background: #1e3b5a;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 1rem;
+      box-shadow: 0 6px 12px rgba(0,20,40,0.08);
+    }
+
+    .subtitle {
+      margin-top: 0.6rem;
+      color: #3f566e;
+      font-size: 1.05rem;
+      max-width: 760px;
+      line-height: 1.55;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.5rem 1.8rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0,20,40,0.03);
+      transition: 0.2s ease;
+      border: 1px solid #eef3f9;
+    }
+
+    .card:hover {
+      box-shadow: 0 20px 32px rgba(0, 20, 40, 0.06);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: #0a2647;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .card h2 i {
+      color: #2b6c9e;
+      font-size: 1.6rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0b2a44;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h3 i {
+      color: #b05e3a;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 1rem;
+    }
+
+    .metric-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px dashed #e3eaf1;
+      font-size: 0.95rem;
+    }
+
+    .metric-item .label {
+      color: #3f566e;
+    }
+
+    .metric-item .value {
+      font-weight: 500;
+      color: #0a2a44;
+      text-align: right;
+    }
+
+    .star-high {
+      color: #f5b342;
+    }
+
+    .feedback-list {
+      list-style: none;
+      margin-top: 0.8rem;
+    }
+
+    .feedback-list li {
+      padding: 0.3rem 0 0.3rem 1.6rem;
+      position: relative;
+      font-size: 0.95rem;
+      color: #1d3349;
+    }
+
+    .feedback-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #2e74a5;
+      font-weight: bold;
+    }
+
+    .quote-list {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+
+    .quote-list li {
+      padding: 0.25rem 0 0.25rem 1.6rem;
+      position: relative;
+      font-size: 0.92rem;
+      font-style: italic;
+      color: #2a4c6e;
+    }
+
+    .quote-list li::before {
+      content: "“";
+      position: absolute;
+      left: 0.2rem;
+      color: #2e74a5;
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .pill {
+      display: inline-block;
+      background: #e3edf6;
+      color: #15415f;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      letter-spacing: 0.3px;
+      margin: 0.2rem 0.35rem 0.2rem 0;
+    }
+
+    .pill.star {
+      background: #fdeccb;
+      color: #8a5a00;
+    }
+
+    .insight-box {
+      background: #f0f6fe;
+      border-radius: 18px;
+      padding: 1rem 1.4rem;
+      margin: 1rem 0 0.2rem;
+      border-left: 5px solid #1f6390;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .insight-box.warn {
+      background: #fdf4e6;
+      border-left-color: #b7791f;
+    }
+
+    .rec-box {
+      background: #f9fcff;
+      border-radius: 16px;
+      border: 1px solid #dce6f0;
+      padding: 0.8rem 1.1rem;
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .rec-box strong {
+      color: #0f3a5c;
+    }
+
+    .rec-box ul {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .rec-box ul li {
+      padding: 0.15rem 0 0.15rem 1.4rem;
+      position: relative;
+    }
+
+    .rec-box ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1f6390;
+      font-weight: bold;
+    }
+
+    .improve-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .improve-item {
+      background: #fbfdff;
+      border: 1px solid #e4edf6;
+      border-radius: 20px;
+      padding: 1.1rem 1.3rem;
+    }
+
+    .improve-item .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      background: #1e3b5a;
+      color: white;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    .recommendation {
+      background: #f9fcff;
+      border-radius: 24px;
+      padding: 1.2rem 1.8rem;
+      border: 1px solid #dce6f0;
+      margin: 1.5rem 0 0.8rem;
+    }
+
+    .recommendation h3 {
+      font-weight: 600;
+      color: #0f3a5c;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem 1.8rem;
+      padding-left: 0.4rem;
+    }
+
+    .two-col-list li {
+      list-style: none;
+      padding: 0.2rem 0;
+    }
+
+    .two-col-list li i {
+      color: #2e74a5;
+      width: 1.4rem;
+    }
+
+    .phase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .phase-col {
+      background: #fbfdff;
+      border: 1px solid #e4edf6;
+      border-radius: 20px;
+      padding: 1.1rem 1.3rem;
+    }
+
+    .phase-col .phase-title {
+      font-weight: 600;
+      color: #0b2a44;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+
+    .phase-col ul {
+      list-style: none;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .phase-col ul li {
+      padding: 0.25rem 0 0.25rem 1.4rem;
+      position: relative;
+    }
+
+    .phase-col ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1f6390;
+      font-weight: bold;
+    }
+
+    .takeaway-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2.8rem;
+      font-size: 0.9rem;
+      color: #5a6f87;
+      border-top: 1px solid #d6e1ed;
+      padding-top: 2rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2col { grid-template-columns: 1fr; }
+      .improve-grid { grid-template-columns: 1fr; }
+      .phase-grid { grid-template-columns: 1fr; }
+      .two-col-list { grid-template-columns: 1fr; }
+      .header { flex-direction: column; align-items: start; gap: 1rem; }
+      .metric-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1><i class="fas fa-chart-pie" style="margin-right: 12px; background: none; -webkit-text-fill-color: #1f6390;"></i>Post‑Workshop Survey Summary</h1>
+      <p class="subtitle">Key insights &amp; recommendations for future workshop facilitators — based on the three post‑workshop survey results (facilitators: Farihim, Hafiezul, and Sheue Shin) to help prepare more effective sessions.</p>
+    </div>
+    <span class="badge"><i class="fas fa-calendar-alt" style="margin-right: 8px;"></i>2026 · 3 workshops · June–July</span>
+  </div>
+
+  <!-- Overall results + strengths -->
+  <div class="grid-2col">
+    <!-- left: overall results -->
+    <div class="card">
+      <h2><i class="fas fa-thumbs-up"></i> Overall results</h2>
+      <p style="font-size:0.93rem; color:#3f566e; margin-bottom: 0.8rem;">Across all three workshops, participant satisfaction was consistently high.</p>
+      <div class="metric-grid">
+        <div class="metric-item"><span class="label">Overall Satisfaction</span><span class="value"><span class="star-high">⭐</span> Very high (mostly 4–5/5)</span></div>
+        <div class="metric-item"><span class="label">Understanding of Topic</span><span class="value">Excellent</span></div>
+        <div class="metric-item"><span class="label">Workshop Relevance</span><span class="value">Highly relevant</span></div>
+        <div class="metric-item"><span class="label">Facilitator Performance</span><span class="value">Strong</span></div>
+        <div class="metric-item"><span class="label">Knowledge Improvement</span><span class="value">Significant</span></div>
+        <div class="metric-item"><span class="label">Confidence Applying Skills</span><span class="value">Good — room for more hands‑on practice</span></div>
+      </div>
+      <div class="insight-box">
+        <i class="fas fa-check-circle" style="color: #1f6390; margin-right: 8px;"></i>
+        <strong>Participants generally agreed</strong> that the workshops successfully improved their understanding and introduced practical knowledge applicable to their daily work.
+      </div>
+    </div>
+
+    <!-- right: what worked well -->
+    <div class="card">
+      <h2><i class="fas fa-check-circle" style="color:#1e7a5e;"></i> What worked well</h2>
+      <div style="margin-bottom: 0.4rem;">
+        <span class="pill" style="background:#d9f0e3;"><i class="fas fa-star"></i> top strengths</span>
+      </div>
+
+      <h3 style="color:#1e7a5e;"><i class="fas fa-person-chalkboard"></i> 1. Clear and effective facilitation</h3>
+      <p style="font-size:0.93rem; color:#3f566e;">Facilitators were consistently praised for explaining concepts clearly.</p>
+      <ul class="feedback-list">
+        <li>Clear explanations</li>
+        <li>Easy to understand</li>
+        <li>Informative session</li>
+        <li>Well organized</li>
+        <li>Good introduction to the topic</li>
+      </ul>
+      <p style="font-size:0.9rem; color:#2a4c6e; margin-top:0.6rem;"><i class="fas fa-circle-info" style="color:#1e7a5e;"></i> Presentation and communication are already a strong point across all workshops.</p>
+
+      <h3 style="margin-top:1.1rem; color:#1e7a5e;"><i class="fas fa-bullseye"></i> 2. Relevant topics</h3>
+      <p style="font-size:0.93rem; color:#3f566e;">Participants appreciated that topics were closely related to their work:</p>
+      <ul class="quote-list">
+        <li>Useful in daily workflow.</li>
+        <li>Topic was relatable.</li>
+        <li>Good exposure to new tools.</li>
+        <li>Very interesting topic.</li>
+      </ul>
+      <p style="font-size:0.9rem; color:#2a4c6e; margin-top:0.6rem;"><i class="fas fa-circle-info" style="color:#1e7a5e;"></i> Practical, real‑world topics increase engagement and perceived value.</p>
+
+      <h3 style="margin-top:1.1rem; color:#1e7a5e;"><i class="fas fa-graduation-cap"></i> 3. Positive learning experience</h3>
+      <ul class="feedback-list">
+        <li>Better understanding after attending</li>
+        <li>Improved knowledge and skills</li>
+        <li>Increased confidence</li>
+        <li>Satisfaction with workshop quality</li>
+      </ul>
+      <div style="background:#eaf4eb; border-radius: 20px; padding: 0.8rem 1.2rem; margin-top: 0.8rem;">
+        <i class="fas fa-quote-left" style="color:#1f7a5e;"></i> Several respondents described the workshops as a <strong>benchmark for future sessions</strong>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Common improvement areas -->
+  <div class="card" style="margin-bottom: 2rem;">
+    <h2><i class="fas fa-arrow-trend-up" style="color:#b05e3a;"></i> Common improvement areas</h2>
+    <p style="font-size:0.93rem; color:#3f566e; margin-bottom: 1rem;">Although satisfaction was high, recurring suggestions emerged across the surveys.</p>
+    <div class="improve-grid">
+
+      <div class="improve-item">
+        <h3><span class="rank">1</span> More hands‑on practice <span class="pill star"><i class="fas fa-star"></i> most frequent</span></h3>
+        <p style="font-size:0.92rem; color:#3f566e;">Participants consistently requested more implementation exercises, practical activities, time to experiment, and guided practice.</p>
+        <ul class="quote-list">
+          <li>Need more time.</li>
+          <li>Implementation part could be improved.</li>
+          <li>Hands‑on session could include more activities.</li>
+          <li>Maybe conduct a Version 2 workshop.</li>
+        </ul>
+        <div class="rec-box"><strong>Recommendation:</strong> reduce lecture time; increase live demonstrations; include step‑by‑step exercises; reserve <strong>at least 40–50% of the session for hands‑on activities</strong>.</div>
+      </div>
+
+      <div class="improve-item">
+        <h3><span class="rank">2</span> Share learning materials after the workshop</h3>
+        <p style="font-size:0.92rem; color:#3f566e;">Participants requested resources such as workshop slides, reference materials, cheat sheets, and documentation.</p>
+        <ul class="quote-list">
+          <li>Share presentation slides.</li>
+          <li>Provide an n8n cheat sheet.</li>
+          <li>Share reference materials for future use.</li>
+        </ul>
+        <div class="rec-box"><strong>Recommendation:</strong> prepare a resource package — presentation slides, cheat sheet, useful links, sample projects, and FAQs.</div>
+      </div>
+
+      <div class="improve-item">
+        <h3><span class="rank">3</span> Improve pre‑workshop preparation</h3>
+        <p style="font-size:0.92rem; color:#3f566e;">Several participants experienced setup issues. Share prerequisites earlier, specify software versions, list dependencies, and provide setup instructions beforehand.</p>
+        <ul class="quote-list">
+          <li>Include Node.js version.</li>
+          <li>Include package dependencies.</li>
+          <li>Allow participants to complete setup beforehand.</li>
+        </ul>
+        <div class="rec-box"><strong>Recommendation:</strong> send a pre‑workshop checklist <strong>2–3 days in advance</strong> — required software, version numbers, installation guide, required accounts, sample files.</div>
+      </div>
+
+      <div class="improve-item">
+        <h3><span class="rank">4</span> Match workshop pace to participants</h3>
+        <p style="font-size:0.92rem; color:#3f566e;">Some participants felt the workshop could allow more time for learning.</p>
+        <div class="rec-box"><strong>Recommendation:</strong> slow down during technical demonstrations; pause for questions after each major section; include short recap sessions before moving on. This improves confidence among beginners while keeping the session accessible.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Best practices + future facilitator guide -->
+  <div class="card" style="margin-bottom: 1.5rem;">
+    <h2><i class="fas fa-list-check"></i> Best practices &amp; future facilitator guide</h2>
+    <div style="margin: 0.4rem 0 0.8rem;">
+      <span class="pill" style="background:#d9f0e3;">clear explanations</span>
+      <span class="pill" style="background:#d9f0e3;">real‑world examples</span>
+      <span class="pill" style="background:#d9f0e3;">relevant use cases</span>
+      <span class="pill" style="background:#d9f0e3;">organized agenda</span>
+      <span class="pill" style="background:#d9f0e3;">interactive demonstrations</span>
+      <span class="pill" style="background:#d9f0e3;">friendly facilitation</span>
+      <span class="pill" style="background:#d9f0e3;">practical content for daily work</span>
+    </div>
+    <p style="font-size:0.9rem; color:#2a4c6e; margin-bottom: 0.6rem;">Successful workshops shared these characteristics — they should remain the foundation of future workshops.</p>
+    <div class="phase-grid">
+      <div class="phase-col">
+        <div class="phase-title"><i class="fas fa-calendar-check" style="color:#1f6390;"></i> Before the workshop</div>
+        <ul>
+          <li>Share prerequisites and installation guide</li>
+          <li>Provide required software versions and dependencies</li>
+          <li>Ensure participants complete setup beforehand</li>
+          <li>Share the workshop agenda in advance</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <div class="phase-title"><i class="fas fa-person-chalkboard" style="color:#1f6390;"></i> During the workshop</div>
+        <ul>
+          <li>Explain concepts clearly</li>
+          <li>Demonstrate practical, real‑world examples</li>
+          <li>Increase interactive and hands‑on activities</li>
+          <li>Allow time for questions and troubleshooting</li>
+          <li>Keep the pace suitable for mixed skill levels</li>
+        </ul>
+      </div>
+      <div class="phase-col">
+        <div class="phase-title"><i class="fas fa-box-open" style="color:#1f6390;"></i> After the workshop</div>
+        <ul>
+          <li>Share presentation slides</li>
+          <li>Provide cheat sheets or quick‑reference guides</li>
+          <li>Share sample projects or source code</li>
+          <li>Include useful documentation and learning resources</li>
+          <li>Consider follow‑up or advanced (“Part 2”) workshops</li>
+        </ul>
+      </div>
+    </div>
+    <div style="background:#e5eef9; border-radius: 30px; padding: 0.6rem 1.5rem; display: inline-block; margin-top: 0.2rem;">
+      <i class="fas fa-flag" style="color:#1f6390;"></i> Keep: clear explanations, real‑world use cases, friendly facilitation
+    </div>
+  </div>
+
+  <!-- Key takeaways & conclusion -->
+  <div class="grid-2col">
+    <div class="card">
+      <h2><i class="fas fa-seedling" style="color:#1e7a5e;"></i> Key takeaways</h2>
+      <div class="takeaway-row">
+        <div>
+          <span class="pill" style="background:#d0e6d6;">strengths</span>
+          <ul class="feedback-list">
+            <li>High participant satisfaction</li>
+            <li>Clear and engaging facilitation</li>
+            <li>Relevant and practical topics</li>
+            <li>Significant improvement in understanding and knowledge</li>
+          </ul>
+        </div>
+        <div>
+          <span class="pill" style="background:#f4e2d4;">opportunities</span>
+          <ul class="feedback-list">
+            <li>Increase hands‑on practice and implementation exercises</li>
+            <li>Share post‑workshop learning materials</li>
+            <li>Improve pre‑workshop setup instructions and prerequisites</li>
+            <li>Allocate more time for practical application and Q&amp;A</li>
+          </ul>
+        </div>
+        <div style="background: #f7faff; border-radius: 20px; padding: 0.8rem 1.2rem;">
+          <i class="fas fa-circle-check" style="color:#1f6390;"></i> Implementing interactive shifts — supported by better preparation and accessible materials — will further boost confidence and application.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2><i class="fas fa-flag-checkered"></i> Overall conclusion</h2>
+      <p style="line-height:1.6; color:#1d3349;">The survey results indicate that the workshops were <strong>highly successful</strong> in delivering valuable learning experiences, with participants consistently rating them positively. The primary opportunity for future workshops is to shift from information delivery toward <strong>more interactive, hands‑on learning</strong>, supported by better preparation before the session and accessible reference materials afterward. Implementing these improvements is likely to further enhance participant engagement, confidence, and the practical application of the skills learned.</p>
+      <div style="margin-top: 1rem; background: #f0f5fb; border-radius: 18px; padding: 0.6rem 1.2rem;">
+        <i class="fas fa-arrow-right" style="color:#1f6390;"></i> <strong>Next step:</strong> adopt the “Before · During · After” framework for all future workshops.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    <i class="fas fa-chart-line" style="margin-right: 8px;"></i> Executive summary of the three post‑workshop surveys (Farihim · Hafiezul · Sheue Shin) · June–July 2026 · aggregated and anonymized
+  </div>
+</div>
+</body>
+</html>
