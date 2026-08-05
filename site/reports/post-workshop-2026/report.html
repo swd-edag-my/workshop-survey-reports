@@ -3,585 +3,677 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Post-Workshop Survey Summary · Key Insights &amp; Recommendations</title>
+  <title>Post-Workshop Survey 2026 · Key Insights &amp; Recommendations</title>
   <!-- Font Awesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ink: #1e2b3c;
+      --ink-soft: #3f566e;
+      --navy: #0b2a4a;
+      --blue: #1f6390;
+      --blue-soft: #e3edf6;
+      --green: #1e7a5e;
+      --green-soft: #d9f0e3;
+      --amber: #b7791f;
+      --amber-soft: #fdf4e6;
+      --line: #e3eaf1;
+      --bg: #f4f7fc;
     }
 
     body {
-      background: #f4f7fc;
+      background: var(--bg);
       font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
       padding: 2rem 1.5rem;
-      color: #1e2b3c;
-    }
-
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    /* cards & layout */
-    .header {
-      margin-bottom: 2.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header h1 {
-      font-weight: 600;
-      font-size: 2.2rem;
-      letter-spacing: -0.5px;
-      background: linear-gradient(145deg, #0b2a4a, #1b4a7a);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .header .badge {
-      background: #1e3b5a;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 40px;
-      font-weight: 500;
-      font-size: 1rem;
-      box-shadow: 0 6px 12px rgba(0,20,40,0.08);
-    }
-
-    .subtitle {
-      margin-top: 0.6rem;
-      color: #3f566e;
-      font-size: 1.05rem;
-      max-width: 760px;
+      color: var(--ink);
       line-height: 1.55;
     }
 
-    .grid-2col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.8rem;
-      margin-bottom: 2rem;
-    }
+    .container { max-width: 1180px; margin: 0 auto; }
 
-    .card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 1.5rem 1.8rem;
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0,20,40,0.03);
-      transition: 0.2s ease;
-      border: 1px solid #eef3f9;
-    }
+    a { color: var(--blue); }
 
-    .card:hover {
-      box-shadow: 0 20px 32px rgba(0, 20, 40, 0.06);
-    }
-
-    .card h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 1.2rem;
-      color: #0a2647;
+    /* ---------- header ---------- */
+    .header {
+      margin-bottom: 1.6rem;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .header h1 {
+      font-weight: 650;
+      font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+      letter-spacing: -0.5px;
+      color: var(--navy);
+    }
+    .header h1 i { color: var(--blue); margin-right: 0.6rem; }
+    .subtitle {
+      margin-top: 0.5rem;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      max-width: 720px;
+    }
+    .badge {
+      background: var(--navy);
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.92rem;
+      white-space: nowrap;
+      box-shadow: 0 6px 12px rgba(0,20,40,0.08);
+    }
+    .badge i { margin-right: 0.5rem; }
+
+    /* ---------- talking points banner ---------- */
+    .talking-points {
+      background: linear-gradient(135deg, #0b2a4a, #1b4a7a);
+      color: #fff;
+      border-radius: 22px;
+      padding: 1.3rem 1.8rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.2rem;
       align-items: center;
-      gap: 0.6rem;
     }
-
-    .card h2 i {
-      color: #2b6c9e;
-      font-size: 1.6rem;
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #0b2a44;
-      margin-bottom: 0.5rem;
+    .talking-points .tp-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #9cc3e0;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
-    .card h3 i {
-      color: #b05e3a;
-    }
-
-    .metric-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.6rem 1rem;
-    }
-
-    .metric-item {
+    .talking-points .tp-item {
+      font-size: 1.02rem;
+      font-weight: 550;
       display: flex;
-      justify-content: space-between;
-      gap: 0.8rem;
-      padding: 0.55rem 0;
-      border-bottom: 1px dashed #e3eaf1;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .talking-points .tp-item i { color: #7fd6b5; }
+
+    /* ---------- headline stat band ---------- */
+    .stat-band {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1.3rem 1.4rem 1.1rem;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+    }
+    .stat .num {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--navy);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat .num .unit { font-size: 1.1rem; font-weight: 600; color: var(--ink-soft); }
+    .stat .cap {
+      margin-top: 0.45rem;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+    .stat .sub { font-size: 0.8rem; color: #7286a0; font-weight: 400; display: block; margin-top: 0.15rem; }
+
+    /* ---------- cards & section scaffold ---------- */
+    .card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 1.5rem 1.8rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.04), 0 2px 8px rgba(0,20,40,0.03);
+      border: 1px solid #eef3f9;
+      margin-bottom: 1.8rem;
+    }
+    .card > h2 {
+      font-size: 1.35rem;
+      font-weight: 650;
+      margin-bottom: 0.4rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .card > h2 i { color: var(--blue); font-size: 1.4rem; }
+    .section-lede { color: var(--ink-soft); font-size: 0.96rem; margin-bottom: 1.2rem; max-width: 75ch; }
+
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
       font-size: 0.95rem;
+      font-weight: 700;
     }
 
-    .metric-item .label {
-      color: #3f566e;
-    }
+    .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-bottom: 1.8rem; }
+    .grid-2col .card { margin-bottom: 0; }
 
-    .metric-item .value {
-      font-weight: 500;
-      color: #0a2a44;
-      text-align: right;
+    /* ---------- score bars (visual, not color-only) ---------- */
+    .bar-list { display: grid; gap: 0.85rem; margin-top: 0.4rem; }
+    .bar-row { display: grid; grid-template-columns: minmax(11rem, 1.1fr) minmax(8rem, 2fr) auto; align-items: center; gap: 0.9rem; }
+    .bar-label { font-size: 0.93rem; font-weight: 600; color: var(--navy); }
+    .bar-track { position: relative; height: 1.35rem; background: #eef3f9; border-radius: 0.4rem; overflow: hidden; }
+    .bar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: repeating-linear-gradient(-45deg, var(--blue), var(--blue) 8px, #2b6c9e 8px, #2b6c9e 16px);
     }
+    .bar-fill.green { background: repeating-linear-gradient(-45deg, var(--green), var(--green) 8px, #259a78 8px, #259a78 16px); }
+    .bar-fill.amber { background: repeating-linear-gradient(-45deg, #c98a2b, #c98a2b 8px, var(--amber) 8px, var(--amber) 16px); }
+    .bar-value { min-width: 7.5rem; font-size: 0.86rem; font-weight: 600; color: var(--navy); text-align: right; font-variant-numeric: tabular-nums; }
+    .bar-value .qual { display: block; font-size: 0.76rem; font-weight: 500; color: var(--ink-soft); }
 
-    .star-high {
-      color: #f5b342;
+    /* ---------- ranked improvement themes ---------- */
+    .rank-list { display: grid; gap: 1rem; margin-top: 0.4rem; }
+    .rank-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      background: #fbfdff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem 1.2rem;
     }
-
-    .feedback-list {
-      list-style: none;
-      margin-top: 0.8rem;
+    .rank-item.most { border-color: #f0d9a8; background: #fffdf6; }
+    .rank-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      min-width: 3.4rem;
     }
-
-    .feedback-list li {
-      padding: 0.3rem 0 0.3rem 1.6rem;
-      position: relative;
-      font-size: 0.95rem;
-      color: #1d3349;
+    .rank-badge .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
     }
-
-    .feedback-list li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #2e74a5;
-      font-weight: bold;
-    }
-
-    .quote-list {
-      list-style: none;
-      margin-top: 0.6rem;
-    }
-
-    .quote-list li {
-      padding: 0.25rem 0 0.25rem 1.6rem;
-      position: relative;
-      font-size: 0.92rem;
-      font-style: italic;
-      color: #2a4c6e;
-    }
-
-    .quote-list li::before {
-      content: "“";
-      position: absolute;
-      left: 0.2rem;
-      color: #2e74a5;
-      font-weight: bold;
-      font-style: normal;
-    }
+    .rank-badge .freq { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #7286a0; text-align: center; }
+    .rank-badge .freq.hot { color: var(--amber); }
+    .rank-body h3 { font-size: 1.02rem; font-weight: 650; color: var(--navy); margin-bottom: 0.3rem; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .rank-body p { font-size: 0.92rem; color: var(--ink-soft); }
 
     .pill {
       display: inline-block;
-      background: #e3edf6;
+      background: var(--blue-soft);
       color: #15415f;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.2rem 0.8rem;
+      font-size: 0.74rem;
+      font-weight: 650;
+      padding: 0.18rem 0.75rem;
       border-radius: 40px;
       letter-spacing: 0.3px;
-      margin: 0.2rem 0.35rem 0.2rem 0;
+    }
+    .pill.star { background: #fdeccb; color: #8a5a00; }
+    .pill.green { background: var(--green-soft); color: var(--green); }
+
+    .quote-list { list-style: none; margin-top: 0.55rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .quote-list li {
+      font-size: 0.84rem;
+      font-style: italic;
+      color: #2a4c6e;
+      background: #f2f7fc;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 0.22rem 0.85rem;
+    }
+    .quote-list li::before { content: "“"; }
+    .quote-list li::after { content: "”"; }
+
+    .rec-box {
+      background: #f9fcff;
+      border-radius: 14px;
+      border: 1px solid #dce6f0;
+      border-left: 4px solid var(--blue);
+      padding: 0.65rem 1rem;
+      margin-top: 0.7rem;
+      font-size: 0.89rem;
+      line-height: 1.5;
+    }
+    .rec-box strong { color: #0f3a5c; }
+
+    /* ---------- keep vs change split ---------- */
+    .kc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 0.6rem; }
+    .kc-col { border-radius: 18px; padding: 1.2rem 1.4rem; }
+    .kc-col.keep { background: #f2faf5; border: 1px solid #cdeadb; }
+    .kc-col.change { background: #fffaf0; border: 1px solid #f0ddb0; }
+    .kc-col h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.7rem;
+    }
+    .kc-col.keep h3 { color: var(--green); }
+    .kc-col.change h3 { color: var(--amber); }
+    .kc-col ul { list-style: none; display: grid; gap: 0.5rem; }
+    .kc-col li { position: relative; padding-left: 1.7rem; font-size: 0.94rem; color: var(--ink); }
+    .kc-col.keep li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--green); }
+    .kc-col.change li::before { content: "\f061"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--amber); }
+    .kc-col li strong { color: var(--navy); }
+
+    /* ---------- before / during / after ---------- */
+    .phase-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; margin-top: 0.6rem; }
+    .phase-col {
+      background: #fbfdff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.1rem 1.3rem;
+      position: relative;
+    }
+    .phase-col::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 1.3rem; right: 1.3rem;
+      height: 4px;
+      border-radius: 0 0 4px 4px;
+      background: var(--blue);
+    }
+    .phase-col:nth-child(2)::before { background: var(--green); }
+    .phase-col:nth-child(3)::before { background: var(--amber); }
+    .phase-title { font-weight: 700; color: var(--navy); margin-bottom: 0.6rem; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .phase-title i { color: var(--blue); }
+    .phase-col ul { list-style: none; font-size: 0.9rem; display: grid; gap: 0.4rem; }
+    .phase-col li { position: relative; padding-left: 1.4rem; color: var(--ink); }
+    .phase-col li::before { content: "✓"; position: absolute; left: 0; color: var(--blue); font-weight: bold; }
+
+    /* ---------- ask / next step ---------- */
+    .ask-band {
+      background: linear-gradient(135deg, #0b2a4a, #1b4a7a);
+      color: #fff;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.4rem;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
+    .ask-band .ask-icon {
+      width: 3.6rem; height: 3.6rem;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      display: grid; place-items: center;
+      font-size: 1.5rem; color: #7fd6b5;
+    }
+    .ask-band h2 { font-size: 1.3rem; font-weight: 650; margin-bottom: 0.35rem; }
+    .ask-band p { color: #d5e5f2; font-size: 1rem; max-width: 70ch; }
+    .ask-band strong { color: #fff; }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2.4rem;
+      font-size: 0.88rem;
+      color: #5a6f87;
+      border-top: 1px solid #d6e1ed;
+      padding-top: 1.8rem;
+      line-height: 1.7;
     }
 
-    .pill.star {
-      background: #fdeccb;
-      color: #8a5a00;
+    .mini-toc {
+      display: flex; flex-wrap: wrap; gap: 0.45rem;
+      margin: 0 0 1.8rem;
+    }
+    .mini-toc a {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: #fff; border: 1px solid var(--line);
+      border-radius: 30px; padding: 0.35rem 0.95rem;
+      font-size: 0.85rem; font-weight: 600; color: var(--ink-soft);
+      text-decoration: none;
+      transition: 0.15s ease;
+    }
+    .mini-toc a:hover { border-color: var(--blue); color: var(--blue); }
+    .mini-toc .toc-num {
+      display: inline-grid; place-items: center;
+      width: 1.25rem; height: 1.25rem; border-radius: 50%;
+      background: var(--blue-soft); color: var(--blue);
+      font-size: 0.72rem; font-weight: 700;
     }
 
     .insight-box {
       background: #f0f6fe;
-      border-radius: 18px;
-      padding: 1rem 1.4rem;
-      margin: 1rem 0 0.2rem;
-      border-left: 5px solid #1f6390;
+      border-radius: 16px;
+      padding: 0.9rem 1.3rem;
+      margin-top: 1.1rem;
+      border-left: 5px solid var(--blue);
       font-size: 0.95rem;
       line-height: 1.55;
     }
 
-    .insight-box.warn {
-      background: #fdf4e6;
-      border-left-color: #b7791f;
+    section { scroll-margin-top: 1rem; }
+
+    @media (max-width: 900px) {
+      .stat-band { grid-template-columns: repeat(2, 1fr); }
+      .grid-2col, .kc-grid, .phase-grid { grid-template-columns: 1fr; }
+      .ask-band { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 0.3rem; }
+      .bar-value { text-align: left; }
     }
 
-    .rec-box {
-      background: #f9fcff;
-      border-radius: 16px;
-      border: 1px solid #dce6f0;
-      padding: 0.8rem 1.1rem;
-      margin-top: 0.8rem;
-      font-size: 0.9rem;
-      line-height: 1.5;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
     }
 
-    .rec-box strong {
-      color: #0f3a5c;
-    }
-
-    .rec-box ul {
-      list-style: none;
-      margin-top: 0.4rem;
-    }
-
-    .rec-box ul li {
-      padding: 0.15rem 0 0.15rem 1.4rem;
-      position: relative;
-    }
-
-    .rec-box ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #1f6390;
-      font-weight: bold;
-    }
-
-    .improve-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.4rem;
-      margin-top: 0.4rem;
-    }
-
-    .improve-item {
-      background: #fbfdff;
-      border: 1px solid #e4edf6;
-      border-radius: 20px;
-      padding: 1.1rem 1.3rem;
-    }
-
-    .improve-item .rank {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.7rem;
-      height: 1.7rem;
-      border-radius: 50%;
-      background: #1e3b5a;
-      color: white;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-right: 0.5rem;
-    }
-
-    .recommendation {
-      background: #f9fcff;
-      border-radius: 24px;
-      padding: 1.2rem 1.8rem;
-      border: 1px solid #dce6f0;
-      margin: 1.5rem 0 0.8rem;
-    }
-
-    .recommendation h3 {
-      font-weight: 600;
-      color: #0f3a5c;
-      margin-bottom: 0.8rem;
-      font-size: 1.2rem;
-    }
-
-    .two-col-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.6rem 1.8rem;
-      padding-left: 0.4rem;
-    }
-
-    .two-col-list li {
-      list-style: none;
-      padding: 0.2rem 0;
-    }
-
-    .two-col-list li i {
-      color: #2e74a5;
-      width: 1.4rem;
-    }
-
-    .phase-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.2rem;
-      margin: 1rem 0;
-    }
-
-    .phase-col {
-      background: #fbfdff;
-      border: 1px solid #e4edf6;
-      border-radius: 20px;
-      padding: 1.1rem 1.3rem;
-    }
-
-    .phase-col .phase-title {
-      font-weight: 600;
-      color: #0b2a44;
-      margin-bottom: 0.6rem;
-      font-size: 1rem;
-    }
-
-    .phase-col ul {
-      list-style: none;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .phase-col ul li {
-      padding: 0.25rem 0 0.25rem 1.4rem;
-      position: relative;
-    }
-
-    .phase-col ul li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #1f6390;
-      font-weight: bold;
-    }
-
-    .takeaway-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 2.8rem;
-      font-size: 0.9rem;
-      color: #5a6f87;
-      border-top: 1px solid #d6e1ed;
-      padding-top: 2rem;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 860px) {
-      .grid-2col { grid-template-columns: 1fr; }
-      .improve-grid { grid-template-columns: 1fr; }
-      .phase-grid { grid-template-columns: 1fr; }
-      .two-col-list { grid-template-columns: 1fr; }
-      .header { flex-direction: column; align-items: start; gap: 1rem; }
-      .metric-grid { grid-template-columns: 1fr; }
+    @media print {
+      body { background: #fff; padding: 0.5rem; font-size: 10pt; }
+      .card, .stat, .talking-points, .ask-band { box-shadow: none; break-inside: avoid; }
+      .mini-toc { display: none; }
+      .card { margin-bottom: 1rem; }
     }
   </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- Header -->
-  <div class="header">
+  <!-- ===== Header ===== -->
+  <header class="header">
     <div>
-      <h1><i class="fas fa-chart-pie" style="margin-right: 12px; background: none; -webkit-text-fill-color: #1f6390;"></i>Post‑Workshop Survey Summary</h1>
-      <p class="subtitle">Key insights &amp; recommendations for future workshop facilitators — based on the three post‑workshop survey results (facilitators: Farihim, Hafiezul, and Sheue Shin) to help prepare more effective sessions.</p>
+      <h1><i class="fas fa-chart-pie"></i>Post-Workshop Survey 2026</h1>
+      <p class="subtitle">What participants told us after three internal workshops — and the four changes we should make next. Aggregated, anonymized feedback for facilitators <strong>Farihim</strong>, <strong>Hafiezul</strong>, and <strong>Sheue Shin</strong>.</p>
     </div>
-    <span class="badge"><i class="fas fa-calendar-alt" style="margin-right: 8px;"></i>2026 · 3 workshops · June–July</span>
+    <span class="badge"><i class="fas fa-calendar-alt"></i>June–July 2026 · 3 workshops · 24 responses</span>
+  </header>
+
+  <!-- ===== 60-second talking points ===== -->
+  <div class="talking-points" role="note" aria-label="Summary in thirty seconds">
+    <span class="tp-label"><i class="fas fa-stopwatch"></i>In 30 seconds</span>
+    <span class="tp-item"><i class="fas fa-circle-check"></i>Satisfaction was very high across all 3 workshops</span>
+    <span class="tp-item"><i class="fas fa-hands"></i>The #1 request: more hands-on practice</span>
+    <span class="tp-item"><i class="fas fa-list-check"></i>The fix: a Before · During · After checklist</span>
   </div>
 
-  <!-- Overall results + strengths -->
-  <div class="grid-2col">
-    <!-- left: overall results -->
+  <!-- ===== Mini table of contents (speaker navigation) ===== -->
+  <nav class="mini-toc" aria-label="Report sections">
+    <a href="#results"><span class="toc-num">1</span>The results</a>
+    <a href="#worked"><span class="toc-num">2</span>What worked</a>
+    <a href="#improve"><span class="toc-num">3</span>What to improve</a>
+    <a href="#keep-change"><span class="toc-num">4</span>Keep vs change</a>
+    <a href="#playbook"><span class="toc-num">5</span>The playbook</a>
+    <a href="#ask"><span class="toc-num">6</span>The ask</a>
+  </nav>
+
+  <!-- ===== 1 · Headline numbers ===== -->
+  <section id="results" aria-labelledby="results-title">
+    <div class="stat-band">
+      <div class="stat">
+        <div class="num">4–5<span class="unit">/5</span></div>
+        <div class="cap">Overall satisfaction<span class="sub">most frequent rating range</span></div>
+      </div>
+      <div class="stat">
+        <div class="num">24</div>
+        <div class="cap">Completed responses<span class="sub">across all sessions</span></div>
+      </div>
+      <div class="stat">
+        <div class="num">3</div>
+        <div class="cap">Workshops surveyed<span class="sub">June–July 2026</span></div>
+      </div>
+      <div class="stat">
+        <div class="num">#1</div>
+        <div class="cap">Top request: hands-on practice<span class="sub">most frequent suggestion</span></div>
+      </div>
+    </div>
+
     <div class="card">
-      <h2><i class="fas fa-thumbs-up"></i> Overall results</h2>
-      <p style="font-size:0.93rem; color:#3f566e; margin-bottom: 0.8rem;">Across all three workshops, participant satisfaction was consistently high.</p>
-      <div class="metric-grid">
-        <div class="metric-item"><span class="label">Overall Satisfaction</span><span class="value"><span class="star-high">⭐</span> Very high (mostly 4–5/5)</span></div>
-        <div class="metric-item"><span class="label">Understanding of Topic</span><span class="value">Excellent</span></div>
-        <div class="metric-item"><span class="label">Workshop Relevance</span><span class="value">Highly relevant</span></div>
-        <div class="metric-item"><span class="label">Facilitator Performance</span><span class="value">Strong</span></div>
-        <div class="metric-item"><span class="label">Knowledge Improvement</span><span class="value">Significant</span></div>
-        <div class="metric-item"><span class="label">Confidence Applying Skills</span><span class="value">Good — room for more hands‑on practice</span></div>
+      <h2><span class="sec-num">1</span> The results at a glance</h2>
+      <p class="section-lede">Every dimension landed well. The one relative gap — confidence applying skills — points directly at the hands-on theme below.</p>
+      <div class="bar-list">
+        <div class="bar-row">
+          <span class="bar-label">Overall satisfaction</span>
+          <div class="bar-track" role="img" aria-label="Overall satisfaction: very high, mostly 4 to 5 out of 5"><div class="bar-fill green" style="width: 95%"></div></div>
+          <span class="bar-value">Very high<span class="qual">mostly 4–5/5</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Understanding of topic</span>
+          <div class="bar-track" role="img" aria-label="Understanding of topic: excellent"><div class="bar-fill green" style="width: 93%"></div></div>
+          <span class="bar-value">Excellent<span class="qual">qualitative summary</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Workshop relevance</span>
+          <div class="bar-track" role="img" aria-label="Workshop relevance: highly relevant"><div class="bar-fill green" style="width: 92%"></div></div>
+          <span class="bar-value">Highly relevant<span class="qual">qualitative summary</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Facilitator performance</span>
+          <div class="bar-track" role="img" aria-label="Facilitator performance: strong"><div class="bar-fill green" style="width: 90%"></div></div>
+          <span class="bar-value">Strong<span class="qual">qualitative summary</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Knowledge improvement</span>
+          <div class="bar-track" role="img" aria-label="Knowledge improvement: significant"><div class="bar-fill green" style="width: 88%"></div></div>
+          <span class="bar-value">Significant<span class="qual">qualitative summary</span></span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Confidence applying skills</span>
+          <div class="bar-track" role="img" aria-label="Confidence applying skills: good, with room for more hands-on practice"><div class="bar-fill amber" style="width: 76%"></div></div>
+          <span class="bar-value">Good<span class="qual">room for hands-on practice</span></span>
+        </div>
       </div>
       <div class="insight-box">
-        <i class="fas fa-check-circle" style="color: #1f6390; margin-right: 8px;"></i>
-        <strong>Participants generally agreed</strong> that the workshops successfully improved their understanding and introduced practical knowledge applicable to their daily work.
+        <i class="fas fa-check-circle" style="color: var(--blue); margin-right: 0.5rem;"></i>
+        <strong>How to read this:</strong> bars visualize the aggregated qualitative ratings (no per-question scores were published). Participants agreed the workshops improved understanding and introduced knowledge applicable to daily work.
       </div>
     </div>
+  </section>
 
-    <!-- right: what worked well -->
+  <!-- ===== 2 · What worked ===== -->
+  <section id="worked" aria-labelledby="worked-title">
     <div class="card">
-      <h2><i class="fas fa-check-circle" style="color:#1e7a5e;"></i> What worked well</h2>
-      <div style="margin-bottom: 0.4rem;">
-        <span class="pill" style="background:#d9f0e3;"><i class="fas fa-star"></i> top strengths</span>
-      </div>
-
-      <h3 style="color:#1e7a5e;"><i class="fas fa-person-chalkboard"></i> 1. Clear and effective facilitation</h3>
-      <p style="font-size:0.93rem; color:#3f566e;">Facilitators were consistently praised for explaining concepts clearly.</p>
-      <ul class="feedback-list">
-        <li>Clear explanations</li>
-        <li>Easy to understand</li>
-        <li>Informative session</li>
-        <li>Well organized</li>
-        <li>Good introduction to the topic</li>
-      </ul>
-      <p style="font-size:0.9rem; color:#2a4c6e; margin-top:0.6rem;"><i class="fas fa-circle-info" style="color:#1e7a5e;"></i> Presentation and communication are already a strong point across all workshops.</p>
-
-      <h3 style="margin-top:1.1rem; color:#1e7a5e;"><i class="fas fa-bullseye"></i> 2. Relevant topics</h3>
-      <p style="font-size:0.93rem; color:#3f566e;">Participants appreciated that topics were closely related to their work:</p>
-      <ul class="quote-list">
-        <li>Useful in daily workflow.</li>
-        <li>Topic was relatable.</li>
-        <li>Good exposure to new tools.</li>
-        <li>Very interesting topic.</li>
-      </ul>
-      <p style="font-size:0.9rem; color:#2a4c6e; margin-top:0.6rem;"><i class="fas fa-circle-info" style="color:#1e7a5e;"></i> Practical, real‑world topics increase engagement and perceived value.</p>
-
-      <h3 style="margin-top:1.1rem; color:#1e7a5e;"><i class="fas fa-graduation-cap"></i> 3. Positive learning experience</h3>
-      <ul class="feedback-list">
-        <li>Better understanding after attending</li>
-        <li>Improved knowledge and skills</li>
-        <li>Increased confidence</li>
-        <li>Satisfaction with workshop quality</li>
-      </ul>
-      <div style="background:#eaf4eb; border-radius: 20px; padding: 0.8rem 1.2rem; margin-top: 0.8rem;">
-        <i class="fas fa-quote-left" style="color:#1f7a5e;"></i> Several respondents described the workshops as a <strong>benchmark for future sessions</strong>.
-      </div>
-    </div>
-  </div>
-
-  <!-- Common improvement areas -->
-  <div class="card" style="margin-bottom: 2rem;">
-    <h2><i class="fas fa-arrow-trend-up" style="color:#b05e3a;"></i> Common improvement areas</h2>
-    <p style="font-size:0.93rem; color:#3f566e; margin-bottom: 1rem;">Although satisfaction was high, recurring suggestions emerged across the surveys.</p>
-    <div class="improve-grid">
-
-      <div class="improve-item">
-        <h3><span class="rank">1</span> More hands‑on practice <span class="pill star"><i class="fas fa-star"></i> most frequent</span></h3>
-        <p style="font-size:0.92rem; color:#3f566e;">Participants consistently requested more implementation exercises, practical activities, time to experiment, and guided practice.</p>
-        <ul class="quote-list">
-          <li>Need more time.</li>
-          <li>Implementation part could be improved.</li>
-          <li>Hands‑on session could include more activities.</li>
-          <li>Maybe conduct a Version 2 workshop.</li>
-        </ul>
-        <div class="rec-box"><strong>Recommendation:</strong> reduce lecture time; increase live demonstrations; include step‑by‑step exercises; reserve <strong>at least 40–50% of the session for hands‑on activities</strong>.</div>
-      </div>
-
-      <div class="improve-item">
-        <h3><span class="rank">2</span> Share learning materials after the workshop</h3>
-        <p style="font-size:0.92rem; color:#3f566e;">Participants requested resources such as workshop slides, reference materials, cheat sheets, and documentation.</p>
-        <ul class="quote-list">
-          <li>Share presentation slides.</li>
-          <li>Provide an n8n cheat sheet.</li>
-          <li>Share reference materials for future use.</li>
-        </ul>
-        <div class="rec-box"><strong>Recommendation:</strong> prepare a resource package — presentation slides, cheat sheet, useful links, sample projects, and FAQs.</div>
-      </div>
-
-      <div class="improve-item">
-        <h3><span class="rank">3</span> Improve pre‑workshop preparation</h3>
-        <p style="font-size:0.92rem; color:#3f566e;">Several participants experienced setup issues. Share prerequisites earlier, specify software versions, list dependencies, and provide setup instructions beforehand.</p>
-        <ul class="quote-list">
-          <li>Include Node.js version.</li>
-          <li>Include package dependencies.</li>
-          <li>Allow participants to complete setup beforehand.</li>
-        </ul>
-        <div class="rec-box"><strong>Recommendation:</strong> send a pre‑workshop checklist <strong>2–3 days in advance</strong> — required software, version numbers, installation guide, required accounts, sample files.</div>
-      </div>
-
-      <div class="improve-item">
-        <h3><span class="rank">4</span> Match workshop pace to participants</h3>
-        <p style="font-size:0.92rem; color:#3f566e;">Some participants felt the workshop could allow more time for learning.</p>
-        <div class="rec-box"><strong>Recommendation:</strong> slow down during technical demonstrations; pause for questions after each major section; include short recap sessions before moving on. This improves confidence among beginners while keeping the session accessible.</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Best practices + future facilitator guide -->
-  <div class="card" style="margin-bottom: 1.5rem;">
-    <h2><i class="fas fa-list-check"></i> Best practices &amp; future facilitator guide</h2>
-    <div style="margin: 0.4rem 0 0.8rem;">
-      <span class="pill" style="background:#d9f0e3;">clear explanations</span>
-      <span class="pill" style="background:#d9f0e3;">real‑world examples</span>
-      <span class="pill" style="background:#d9f0e3;">relevant use cases</span>
-      <span class="pill" style="background:#d9f0e3;">organized agenda</span>
-      <span class="pill" style="background:#d9f0e3;">interactive demonstrations</span>
-      <span class="pill" style="background:#d9f0e3;">friendly facilitation</span>
-      <span class="pill" style="background:#d9f0e3;">practical content for daily work</span>
-    </div>
-    <p style="font-size:0.9rem; color:#2a4c6e; margin-bottom: 0.6rem;">Successful workshops shared these characteristics — they should remain the foundation of future workshops.</p>
-    <div class="phase-grid">
-      <div class="phase-col">
-        <div class="phase-title"><i class="fas fa-calendar-check" style="color:#1f6390;"></i> Before the workshop</div>
-        <ul>
-          <li>Share prerequisites and installation guide</li>
-          <li>Provide required software versions and dependencies</li>
-          <li>Ensure participants complete setup beforehand</li>
-          <li>Share the workshop agenda in advance</li>
-        </ul>
-      </div>
-      <div class="phase-col">
-        <div class="phase-title"><i class="fas fa-person-chalkboard" style="color:#1f6390;"></i> During the workshop</div>
-        <ul>
-          <li>Explain concepts clearly</li>
-          <li>Demonstrate practical, real‑world examples</li>
-          <li>Increase interactive and hands‑on activities</li>
-          <li>Allow time for questions and troubleshooting</li>
-          <li>Keep the pace suitable for mixed skill levels</li>
-        </ul>
-      </div>
-      <div class="phase-col">
-        <div class="phase-title"><i class="fas fa-box-open" style="color:#1f6390;"></i> After the workshop</div>
-        <ul>
-          <li>Share presentation slides</li>
-          <li>Provide cheat sheets or quick‑reference guides</li>
-          <li>Share sample projects or source code</li>
-          <li>Include useful documentation and learning resources</li>
-          <li>Consider follow‑up or advanced (“Part 2”) workshops</li>
-        </ul>
-      </div>
-    </div>
-    <div style="background:#e5eef9; border-radius: 30px; padding: 0.6rem 1.5rem; display: inline-block; margin-top: 0.2rem;">
-      <i class="fas fa-flag" style="color:#1f6390;"></i> Keep: clear explanations, real‑world use cases, friendly facilitation
-    </div>
-  </div>
-
-  <!-- Key takeaways & conclusion -->
-  <div class="grid-2col">
-    <div class="card">
-      <h2><i class="fas fa-seedling" style="color:#1e7a5e;"></i> Key takeaways</h2>
-      <div class="takeaway-row">
-        <div>
-          <span class="pill" style="background:#d0e6d6;">strengths</span>
-          <ul class="feedback-list">
-            <li>High participant satisfaction</li>
-            <li>Clear and engaging facilitation</li>
-            <li>Relevant and practical topics</li>
-            <li>Significant improvement in understanding and knowledge</li>
+      <h2 id="worked-title"><span class="sec-num">2</span><i class="fas fa-circle-check" style="color: var(--green);"></i> What worked — keep doing this</h2>
+      <p class="section-lede">Three strengths came up in every workshop. They are the foundation to preserve, not the place to experiment.</p>
+      <div class="phase-grid">
+        <div class="phase-col">
+          <div class="phase-title"><i class="fas fa-person-chalkboard" style="color: var(--green);"></i> Clear facilitation</div>
+          <ul>
+            <li>Clear explanations</li>
+            <li>Easy to understand</li>
+            <li>Informative sessions</li>
+            <li>Well organized</li>
           </ul>
         </div>
-        <div>
-          <span class="pill" style="background:#f4e2d4;">opportunities</span>
-          <ul class="feedback-list">
-            <li>Increase hands‑on practice and implementation exercises</li>
-            <li>Share post‑workshop learning materials</li>
-            <li>Improve pre‑workshop setup instructions and prerequisites</li>
-            <li>Allocate more time for practical application and Q&amp;A</li>
+        <div class="phase-col">
+          <div class="phase-title"><i class="fas fa-bullseye" style="color: var(--green);"></i> Relevant topics</div>
+          <ul>
+            <li>Useful in daily workflow</li>
+            <li>Relatable content</li>
+            <li>Good exposure to new tools</li>
+            <li>Real-world use cases</li>
           </ul>
         </div>
-        <div style="background: #f7faff; border-radius: 20px; padding: 0.8rem 1.2rem;">
-          <i class="fas fa-circle-check" style="color:#1f6390;"></i> Implementing interactive shifts — supported by better preparation and accessible materials — will further boost confidence and application.
+        <div class="phase-col">
+          <div class="phase-title"><i class="fas fa-graduation-cap" style="color: var(--green);"></i> Real learning gains</div>
+          <ul>
+            <li>Better understanding after attending</li>
+            <li>Improved knowledge &amp; skills</li>
+            <li>Increased confidence</li>
+            <li>Called a “benchmark” for future sessions</li>
+          </ul>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- ===== 3 · What to improve ===== -->
+  <section id="improve" aria-labelledby="improve-title">
     <div class="card">
-      <h2><i class="fas fa-flag-checkered"></i> Overall conclusion</h2>
-      <p style="line-height:1.6; color:#1d3349;">The survey results indicate that the workshops were <strong>highly successful</strong> in delivering valuable learning experiences, with participants consistently rating them positively. The primary opportunity for future workshops is to shift from information delivery toward <strong>more interactive, hands‑on learning</strong>, supported by better preparation before the session and accessible reference materials afterward. Implementing these improvements is likely to further enhance participant engagement, confidence, and the practical application of the skills learned.</p>
-      <div style="margin-top: 1rem; background: #f0f5fb; border-radius: 18px; padding: 0.6rem 1.2rem;">
-        <i class="fas fa-arrow-right" style="color:#1f6390;"></i> <strong>Next step:</strong> adopt the “Before · During · After” framework for all future workshops.
+      <h2 id="improve-title"><span class="sec-num">3</span><i class="fas fa-arrow-trend-up" style="color: var(--amber);"></i> What to improve — ranked by how often it came up</h2>
+      <p class="section-lede">Satisfaction was high, but four suggestions recurred. They are listed most-mentioned first, each with a concrete fix.</p>
+      <div class="rank-list">
+
+        <div class="rank-item most">
+          <div class="rank-badge">
+            <span class="rank">1</span>
+            <span class="freq hot">Most frequent</span>
+          </div>
+          <div class="rank-body">
+            <h3>More hands-on practice <span class="pill star"><i class="fas fa-star"></i> top request</span></h3>
+            <p>Participants consistently asked for more implementation exercises, practical activities, time to experiment, and guided practice.</p>
+            <ul class="quote-list">
+              <li>Need more time</li>
+              <li>Implementation part could be improved</li>
+              <li>More hands-on activities</li>
+              <li>Maybe a Version 2 workshop</li>
+            </ul>
+            <div class="rec-box"><strong>Fix:</strong> reduce lecture time, add live step-by-step exercises, and reserve <strong>at least 40–50% of each session for hands-on work</strong>.</div>
+          </div>
+        </div>
+
+        <div class="rank-item">
+          <div class="rank-badge">
+            <span class="rank">2</span>
+            <span class="freq">Frequent</span>
+          </div>
+          <div class="rank-body">
+            <h3>Share learning materials afterward</h3>
+            <p>Participants wanted slides, reference materials, cheat sheets, and documentation to revisit later.</p>
+            <ul class="quote-list">
+              <li>Share presentation slides</li>
+              <li>Provide an n8n cheat sheet</li>
+              <li>Share reference materials</li>
+            </ul>
+            <div class="rec-box"><strong>Fix:</strong> send a resource package after every session — slides, cheat sheet, useful links, sample projects, FAQs.</div>
+          </div>
+        </div>
+
+        <div class="rank-item">
+          <div class="rank-badge">
+            <span class="rank">3</span>
+            <span class="freq">Recurring</span>
+          </div>
+          <div class="rank-body">
+            <h3>Better pre-workshop preparation</h3>
+            <p>Several participants hit setup issues. Prerequisites, software versions, and dependencies should arrive earlier.</p>
+            <ul class="quote-list">
+              <li>Include Node.js version</li>
+              <li>Include package dependencies</li>
+              <li>Let us set up beforehand</li>
+            </ul>
+            <div class="rec-box"><strong>Fix:</strong> send a pre-workshop checklist <strong>2–3 days ahead</strong> — required software, versions, install guide, accounts, sample files.</div>
+          </div>
+        </div>
+
+        <div class="rank-item">
+          <div class="rank-badge">
+            <span class="rank">4</span>
+            <span class="freq">Occasional</span>
+          </div>
+          <div class="rank-body">
+            <h3>Match the pace to the room</h3>
+            <p>Some participants needed more time to absorb technical demonstrations.</p>
+            <div class="rec-box"><strong>Fix:</strong> slow down during demos, pause for questions after each major section, and add short recaps before moving on.</div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ===== 4 · Keep vs change ===== -->
+  <section id="keep-change" aria-labelledby="kc-title">
+    <div class="card">
+      <h2 id="kc-title"><span class="sec-num">4</span> The story in one view: keep vs change</h2>
+      <p class="section-lede">This is the slide to linger on — what stays, and what changes for the next round of workshops.</p>
+      <div class="kc-grid">
+        <div class="kc-col keep">
+          <h3><i class="fas fa-shield-halved"></i> Keep — proven strengths</h3>
+          <ul>
+            <li><strong>Clear explanations</strong> and friendly facilitation</li>
+            <li><strong>Real-world examples</strong> and relevant use cases</li>
+            <li><strong>Organized agenda</strong> and interactive demonstrations</li>
+            <li><strong>Practical content</strong> tied to daily work</li>
+          </ul>
+        </div>
+        <div class="kc-col change">
+          <h3><i class="fas fa-arrows-rotate"></i> Change — the four fixes</h3>
+          <ul>
+            <li><strong>More hands-on:</strong> 40–50% of every session is practice</li>
+            <li><strong>Materials after:</strong> slides + cheat sheets + samples</li>
+            <li><strong>Setup before:</strong> checklist 2–3 days in advance</li>
+            <li><strong>Steadier pace:</strong> pauses and recaps built in</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5 · Playbook ===== -->
+  <section id="playbook" aria-labelledby="playbook-title">
+    <div class="card">
+      <h2 id="playbook-title"><span class="sec-num">5</span><i class="fas fa-list-check"></i> The playbook: Before · During · After</h2>
+      <p class="section-lede">The fixes above collapse into one repeatable checklist for every future facilitator.</p>
+      <div class="phase-grid">
+        <div class="phase-col">
+          <div class="phase-title"><i class="fas fa-calendar-check"></i> Before</div>
+          <ul>
+            <li>Share prerequisites &amp; install guide</li>
+            <li>List software versions &amp; dependencies</li>
+            <li>Confirm setup is done beforehand</li>
+            <li>Send the agenda in advance</li>
+          </ul>
+        </div>
+        <div class="phase-col">
+          <div class="phase-title"><i class="fas fa-person-chalkboard"></i> During</div>
+          <ul>
+            <li>Explain concepts clearly</li>
+            <li>Demo practical, real-world examples</li>
+            <li>Prioritize hands-on activities</li>
+            <li>Leave time for Q&amp;A &amp; troubleshooting</li>
+            <li>Pace for mixed skill levels</li>
+          </ul>
+        </div>
+        <div class="phase-col">
+          <div class="phase-title"><i class="fas fa-box-open"></i> After</div>
+          <ul>
+            <li>Share slides &amp; cheat sheets</li>
+            <li>Share sample projects / source code</li>
+            <li>Include docs &amp; learning resources</li>
+            <li>Consider a “Part 2” follow-up</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6 · The ask ===== -->
+  <section id="ask" aria-labelledby="ask-title">
+    <div class="ask-band">
+      <div class="ask-icon" aria-hidden="true"><i class="fas fa-flag-checkered"></i></div>
+      <div>
+        <h2 id="ask-title">The ask for this team</h2>
+        <p>The workshops were <strong>highly successful</strong> — the opportunity now is to shift from information delivery toward interactive, hands-on learning. <strong>Next step:</strong> adopt the Before · During · After checklist as the standard for every future workshop, starting with the 40–50% hands-on rule.</p>
+      </div>
+    </div>
+  </section>
 
   <div class="footer-note">
-    <i class="fas fa-chart-line" style="margin-right: 8px;"></i> Executive summary of the three post‑workshop surveys (Farihim · Hafiezul · Sheue Shin) · June–July 2026 · aggregated and anonymized
+    <i class="fas fa-chart-line" style="margin-right: 0.5rem;"></i>
+    Executive summary of three post-workshop surveys (Farihim · Hafiezul · Sheue Shin) · June–July 2026 · 24 responses · aggregated and anonymized.<br/>
+    Bars visualize qualitative ratings for discussion; no per-question numeric scores were published. <a href="../../index.html">← Back to all reports</a>
   </div>
 </div>
 </body>
